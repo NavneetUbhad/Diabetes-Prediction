@@ -8,4 +8,4 @@ joblib
 flask
 To install the required dependencies, you can use the following pip commands:
 
-pip install pandas numpy scikit-learn joblib
+pip install flask pandas numpy scikit-learn joblib
