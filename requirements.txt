@@ -1,0 +1,11 @@
+Project Dependencies
+The following Python libraries are required for this project:
+
+pandas
+numpy
+scikit-learn
+joblib
+
+To install the required dependencies, you can use the following pip commands:
+
+pip install pandas numpy scikit-learn joblib

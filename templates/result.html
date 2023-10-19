@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            animation: colorChange 3s linear forwards; /* CSS animation (3 seconds linear transition) */
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: #F3E5AB; /* Initial background color (Vanilla) */
+            }
+            100% {
+                {% if prediction == "Person is not diabetic" %}
+                background-color: #4CAF50; /* Final background color (Green) */
+                {% elif prediction == "Person is diabetic" %}
+                background-color: #FF5733; /* Final background color (Red) */
+                {% endif %}
+            }
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .message {
+            color: white;
+            font-size: 24px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: inherit; /* Match background color of body */
+        }
+
+        .success {
+            background-color: #4CAF50; /* Green */
+        }
+
+        .danger {
+            background-color: #FF5733; /* Red */
+        }
+
+        .precautions {
+            font-size: 18px;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: inherit; /* Match background color of body */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if prediction == "Person is not diabetic" %}
+            <div class="message success">Person is not diabetic</div>
+            <div class="precautions">
+                <h2>Precautions:</h2>
+                <ul>
+                    <li>Eat a balanced diet with plenty of fruits and vegetables.</li>
+                    <li>Engage in regular physical activity.</li>
+                    <li>Monitor your blood sugar levels regularly.</li>
+                    <li>Stay hydrated by drinking enough water.</li>
+                </ul>
+            </div>
+        {% elif prediction == "Person is diabetic" %}
+            <div class="message danger">Person is diabetic</div>
+            <p class="message danger">Consult to Doctor</p>
+            <div class="precautions">
+                <h2>Precautions:</h2>
+                <ul>
+                    <li>Follow your doctor's prescribed treatment plan.</li>
+                    <li>Maintain a healthy diet and control your carbohydrate intake.</li>
+                    <li>Monitor your blood sugar levels as advised.</li>
+                    <li>Engage in regular exercise and stay physically active.</li>
+                </ul>
+            </div>
+        {% endif %}
+        <a href="/">Back to Input</a>
+    </div>
+</body>
+</html>
