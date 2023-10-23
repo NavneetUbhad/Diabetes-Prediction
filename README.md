@@ -36,5 +36,5 @@ Aspiring data scientist eager to apply data-driven methodologies for problem-sol
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/NavneetUbhad/Diabetes-Prediction/blob/main/LICENSE)  
 
